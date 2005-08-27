@@ -1,4 +1,4 @@
-# $Rev: 3278 $, $Date: 2005-08-15 12:17:57 $
+# $Rev: 3278 $, $Date: 2005-08-27 17:38:15 $
 #
 Summary:	fontenc library
 Summary(pl):	Biblioteka fontenc
@@ -13,7 +13,7 @@ URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
-BuildRequires:	libz-devel
+BuildRequires:	zlib-devel
 BuildRequires:	pkg-config
 BuildRequires:	xorg-util-util-macros
 BuildRequires:	xorg-proto-xproto-devel
@@ -33,7 +33,7 @@ Summary:	Header files libfontenc development
 Summary(pl):	Pliki nag³ówkowe do biblioteki libfontenc
 Group:		X11/Development/Libraries
 Requires:	xorg-lib-libfontenc = %{version}-%{release}
-Requires:	libz-devel
+Requires:	zlib-devel
 Requires:	xorg-proto-xproto-devel
 
 %description devel
