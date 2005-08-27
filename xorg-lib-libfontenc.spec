@@ -17,8 +17,6 @@ BuildRequires:	xorg-util-util-macros
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-
 %description
 fontenc library.
 
