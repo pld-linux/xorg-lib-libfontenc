@@ -1,5 +1,3 @@
-# $Rev: 3278 $, $Date: 2005-08-27 17:42:48 $
-#
 Summary:	fontenc library
 Summary(pl):	Biblioteka fontenc
 Name:		xorg-lib-libfontenc
@@ -13,11 +11,11 @@ URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
-BuildRequires:	zlib-devel
 BuildRequires:	pkgconfig >= 0.19
-BuildRequires:	xorg-util-util-macros
 BuildRequires:	xorg-proto-xproto-devel
-BuildRoot:	%{tmpdir}/libfontenc-%{version}-root-%(id -u -n)
+BuildRequires:	xorg-util-util-macros
+BuildRequires:	zlib-devel
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 
@@ -27,14 +25,13 @@ fontenc library.
 %description -l pl
 Biblioteka fontenc.
 
-
 %package devel
 Summary:	Header files libfontenc development
 Summary(pl):	Pliki nag³ówkowe do biblioteki libfontenc
 Group:		X11/Development/Libraries
-Requires:	xorg-lib-libfontenc = %{version}-%{release}
-Requires:	zlib-devel
+Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-proto-xproto-devel
+Requires:	zlib-devel
 
 %description devel
 fontenc library.
@@ -48,12 +45,11 @@ Biblioteka fontenc.
 Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
 u¿ywaj±cych biblioteki libfontenc.
 
-
 %package static
-Summary:	Static libfontenc libraries
-Summary(pl):	Biblioteki statyczne libfontenc
-Group:		Development/Libraries
-Requires:	xorg-lib-libfontenc-devel = %{version}-%{release}
+Summary:	Static libfontenc library
+Summary(pl):	Biblioteka statyczna libfontenc
+Group:		X11/Development/Libraries
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 fontenc library.
@@ -65,10 +61,8 @@ Biblioteka fontenc.
 
 Pakiet zawiera statyczn± bibliotekê libfontenc.
 
-
 %prep
 %setup -q -n libfontenc-%{version}
-
 
 %build
 %{__libtoolize}
@@ -80,7 +74,6 @@ Pakiet zawiera statyczn± bibliotekê libfontenc.
 
 %{__make}
 
-
 %install
 rm -rf $RPM_BUILD_ROOT
 
@@ -88,28 +81,23 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	pkgconfigdir=%{_pkgconfigdir}
 
-
 %clean
 rm -rf $RPM_BUILD_ROOT
-
 
 %post	-p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
-
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog
-%attr(755,root,wheel) %{_libdir}/libfontenc.so.*
-
+%attr(755,root,root) %{_libdir}/libfontenc.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%{_includedir}/X11/fonts/*.h
+%attr(755,root,root) %{_libdir}/libfontenc.so
 %{_libdir}/libfontenc.la
-%attr(755,root,wheel) %{_libdir}/libfontenc.so
+%{_includedir}/X11/fonts/*.h
 %{_pkgconfigdir}/fontenc.pc
-
 
 %files static
 %defattr(644,root,root,755)
