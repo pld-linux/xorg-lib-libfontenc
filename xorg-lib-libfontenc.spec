@@ -1,4 +1,4 @@
-# $Rev: 3278 $, $Date: 2005-08-27 17:38:15 $
+# $Rev: 3278 $, $Date: 2005-08-27 17:42:48 $
 #
 Summary:	fontenc library
 Summary(pl):	Biblioteka fontenc
@@ -14,7 +14,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	zlib-devel
-BuildRequires:	pkg-config
+BuildRequires:	pkgconfig >= 0.19
 BuildRequires:	xorg-util-util-macros
 BuildRequires:	xorg-proto-xproto-devel
 BuildRoot:	%{tmpdir}/libfontenc-%{version}-root-%(id -u -n)
