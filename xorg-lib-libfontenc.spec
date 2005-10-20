@@ -1,14 +1,14 @@
 Summary:	fontenc library
 Summary(pl):	Biblioteka fontenc
 Name:		xorg-lib-libfontenc
-Version:	0.99.0
-Release:	0.02
+Version:	0.99.1
+Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/lib/libfontenc-%{version}.tar.bz2
-# Source0-md5:	a26b8f108a99ab48f3d01ffdcda2725d
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC1/lib/libfontenc-%{version}.tar.bz2
+# Source0-md5:	647781388349024497d3137336ab9259
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 0.19
@@ -28,7 +28,8 @@ Summary:	Header files libfontenc development
 Summary(pl):	Pliki nag³ówkowe do biblioteki libfontenc
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	xorg-proto-xproto-devel
+# just for dirs
+Requires:	xorg-proto-fontsproto-devel
 Requires:	zlib-devel
 
 %description devel
