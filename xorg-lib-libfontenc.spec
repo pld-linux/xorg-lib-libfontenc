@@ -24,8 +24,8 @@ fontenc library.
 Biblioteka fontenc.
 
 %package devel
-Summary:	Header files libfontenc development
-Summary(pl):	Pliki nag³ówkowe do biblioteki libfontenc
+Summary:	Header files for libfontenc library
+Summary(pl):	Pliki nag³ówkowe biblioteki libfontenc
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 # just for dirs
@@ -36,7 +36,7 @@ Requires:	zlib-devel
 fontenc library.
 
 This package contains the header files needed to develop programs that
-use these libfontenc.
+use libfontenc.
 
 %description devel -l pl
 Biblioteka fontenc.
