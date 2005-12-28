@@ -1,12 +1,12 @@
 Summary:	fontenc library
 Summary(pl):	Biblioteka fontenc
 Name:		xorg-lib-libfontenc
-Version:	1.0.0
+Version:	1.0.1
 Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC4/lib/libfontenc-%{version}.tar.bz2
-# Source0-md5:	c0eff6b88213629cb72ca9c4486900a4
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/lib/libfontenc-%{version}.tar.bz2
+# Source0-md5:	8623cb508fe8f45a8b693a7c6d64b6e1
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -89,7 +89,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog
+%doc COPYING ChangeLog
 %attr(755,root,root) %{_libdir}/libfontenc.so.*.*.*
 
 %files devel
