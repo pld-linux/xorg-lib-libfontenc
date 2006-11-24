@@ -2,7 +2,7 @@ Summary:	fontenc library
 Summary(pl):	Biblioteka fontenc
 Name:		xorg-lib-libfontenc
 Version:	1.0.3
-Release:	3
+Release:	4
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libfontenc-%{version}.tar.bz2
