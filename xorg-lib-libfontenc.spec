@@ -1,5 +1,5 @@
 Summary:	fontenc library
-Summary(pl.UTF-8):   Biblioteka fontenc
+Summary(pl.UTF-8):	Biblioteka fontenc
 Name:		xorg-lib-libfontenc
 Version:	1.0.4
 Release:	1
@@ -25,7 +25,7 @@ Biblioteka fontenc.
 
 %package devel
 Summary:	Header files for libfontenc library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libfontenc
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libfontenc
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 # just for dirs
@@ -46,7 +46,7 @@ używających biblioteki libfontenc.
 
 %package static
 Summary:	Static libfontenc library
-Summary(pl.UTF-8):   Biblioteka statyczna libfontenc
+Summary(pl.UTF-8):	Biblioteka statyczna libfontenc
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
