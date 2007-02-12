@@ -1,5 +1,5 @@
 Summary:	fontenc library
-Summary(pl):	Biblioteka fontenc
+Summary(pl.UTF-8):   Biblioteka fontenc
 Name:		xorg-lib-libfontenc
 Version:	1.0.4
 Release:	1
@@ -20,12 +20,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 fontenc library.
 
-%description -l pl
+%description -l pl.UTF-8
 Biblioteka fontenc.
 
 %package devel
 Summary:	Header files for libfontenc library
-Summary(pl):	Pliki nag³ówkowe biblioteki libfontenc
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki libfontenc
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 # just for dirs
@@ -38,15 +38,15 @@ fontenc library.
 This package contains the header files needed to develop programs that
 use libfontenc.
 
-%description devel -l pl
+%description devel -l pl.UTF-8
 Biblioteka fontenc.
 
-Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
-u¿ywaj±cych biblioteki libfontenc.
+Pakiet zawiera pliki nagÅ‚Ã³wkowe niezbÄ™dne do kompilowania programÃ³w
+uÅ¼ywajÄ…cych biblioteki libfontenc.
 
 %package static
 Summary:	Static libfontenc library
-Summary(pl):	Biblioteka statyczna libfontenc
+Summary(pl.UTF-8):   Biblioteka statyczna libfontenc
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
@@ -55,10 +55,10 @@ fontenc library.
 
 This package contains the static libfontenc library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteka fontenc.
 
-Pakiet zawiera statyczn± bibliotekê libfontenc.
+Pakiet zawiera statycznÄ… bibliotekÄ™ libfontenc.
 
 %prep
 %setup -q -n libfontenc-%{version}
