@@ -1,5 +1,5 @@
-Summary:	fontenc library
-Summary(pl.UTF-8):	Biblioteka fontenc
+Summary:	fontenc - font encoding library
+Summary(pl.UTF-8):	Biblioteka fontenc obsługująca kodowanie fontów
 Name:		xorg-lib-libfontenc
 Version:	1.0.5
 Release:	1
@@ -13,15 +13,15 @@ BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-proto-xproto-devel
-BuildRequires:	xorg-util-util-macros >= 1.1.0
+BuildRequires:	xorg-util-util-macros >= 1.2
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-fontenc library.
+fontenc - font encoding library.
 
 %description -l pl.UTF-8
-Biblioteka fontenc.
+Biblioteka fontenc obsługująca kodowanie fontów.
 
 %package devel
 Summary:	Header files for libfontenc library
@@ -33,13 +33,13 @@ Requires:	xorg-proto-fontsproto-devel
 Requires:	zlib-devel
 
 %description devel
-fontenc library.
+fontenc - font encoding library.
 
 This package contains the header files needed to develop programs that
 use libfontenc.
 
 %description devel -l pl.UTF-8
-Biblioteka fontenc.
+Biblioteka fontenc obsługująca kodowanie fontów.
 
 Pakiet zawiera pliki nagłówkowe niezbędne do kompilowania programów
 używających biblioteki libfontenc.
@@ -51,12 +51,12 @@ Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
-fontenc library.
+fontenc - font encoding library.
 
 This package contains the static libfontenc library.
 
 %description static -l pl.UTF-8
-Biblioteka fontenc.
+Biblioteka fontenc obsługująca kodowanie fontów.
 
 Pakiet zawiera statyczną bibliotekę libfontenc.
 
@@ -89,14 +89,15 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog
+%doc COPYING ChangeLog README
 %attr(755,root,root) %{_libdir}/libfontenc.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libfontenc.so.1
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libfontenc.so
 %{_libdir}/libfontenc.la
-%{_includedir}/X11/fonts/*.h
+%{_includedir}/X11/fonts/fontenc.h
 %{_pkgconfigdir}/fontenc.pc
 
 %files static
