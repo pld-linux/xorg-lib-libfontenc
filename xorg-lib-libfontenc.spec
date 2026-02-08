@@ -1,12 +1,12 @@
 Summary:	fontenc - font encoding library
 Summary(pl.UTF-8):	Biblioteka fontenc obsługująca kodowanie fontów
 Name:		xorg-lib-libfontenc
-Version:	1.1.8
+Version:	1.1.9
 Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	https://xorg.freedesktop.org/releases/individual/lib/libfontenc-%{version}.tar.xz
-# Source0-md5:	8816cc44d06ebe42e85950b368185826
+# Source0-md5:	3cba344d6b351cf308114865afa0d91e
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.70
 BuildRequires:	automake
@@ -95,12 +95,12 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc COPYING ChangeLog README.md
-%attr(755,root,root) %{_libdir}/libfontenc.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libfontenc.so.1
+%{_libdir}/libfontenc.so.*.*.*
+%ghost %{_libdir}/libfontenc.so.1
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libfontenc.so
+%{_libdir}/libfontenc.so
 %{_includedir}/X11/fonts/fontenc.h
 %{_pkgconfigdir}/fontenc.pc
 
