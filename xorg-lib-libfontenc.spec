@@ -9,7 +9,7 @@ Source0:	https://xorg.freedesktop.org/releases/individual/lib/libfontenc-%{versi
 # Source0-md5:	f2824519c386ce1a367400d88d92d680
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.70
-BuildRequires:	automake
+BuildRequires:	automake >= 1:1.11
 BuildRequires:	libtool >= 2:2
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	tar >= 1:1.22
@@ -30,10 +30,10 @@ Biblioteka fontenc obsługująca kodowanie fontów.
 Summary:	Header files for libfontenc library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libfontenc
 Group:		X11/Development/Libraries
-Requires:	%{name} = %{version}-%{release}
+Requires:	%{name}%{?_isa} = %{version}-%{release}
 # just for dirs
 Requires:	xorg-proto-fontsproto-devel
-Requires:	zlib-devel
+Requires:	zlib-devel%{?_isa}
 
 %description devel
 fontenc - font encoding library.
@@ -51,7 +51,7 @@ używających biblioteki libfontenc.
 Summary:	Static libfontenc library
 Summary(pl.UTF-8):	Biblioteka statyczna libfontenc
 Group:		X11/Development/Libraries
-Requires:	%{name}-devel = %{version}-%{release}
+Requires:	%{name}-devel%{?_isa} = %{version}-%{release}
 
 %description static
 fontenc - font encoding library.
@@ -68,7 +68,7 @@ Pakiet zawiera statyczną bibliotekę libfontenc.
 
 %build
 %{__libtoolize}
-%{__aclocal}
+%{__aclocal} -I m4
 %{__autoconf}
 %{__autoheader}
 %{__automake}
